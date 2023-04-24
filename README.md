@@ -1,6 +1,6 @@
 # Teste Prático - Iniflex
 
-![Top Language](https://img.shields.io/github/languages/top/pauloruan/contacts?style=for-the-badge) ![Last Modify](https://img.shields.io/github/last-commit/pauloruan/contacts?style=for-the-badge)
+![Top Language](https://img.shields.io/github/languages/top/pauloruan/teste-pratico-iniflex?style=for-the-badge) ![Last Modify](https://img.shields.io/github/last-commit/pauloruan/teste-pratico-iniflex?style=for-the-badge)
 
 ## Descrição do Projeto
 
