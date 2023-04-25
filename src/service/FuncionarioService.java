@@ -62,4 +62,25 @@ public class FuncionarioService {
             System.out.println("\n");
         }
     }
+
+    public void filtrarFuncionariosPorMesAniversario(int mes) {
+        for (Funcionario funcionario : funcionarios) {
+            if (funcionario.getDataNascimento().getMonthValue() == mes) {
+                System.out.println("Nome: " + funcionario.getNome()
+                        + " - Data de Nascimento: " + funcionario.getDataNascimentoFormatada()
+                        + " - Salário: " + funcionario.getSalarioFormatado()
+                        + " - Função: " + funcionario.getFuncao()
+                        + "."
+                );
+            }
+        }
+        System.out.println("\n");
+    }
+
+    public void imprimirFuncionariosAniversariantes() {
+        System.out.println("Funcionários que fazem aniversário no mês 10 e 12:");
+        filtrarFuncionariosPorMesAniversario(10);
+        filtrarFuncionariosPorMesAniversario(12);
+    }
+
 }
