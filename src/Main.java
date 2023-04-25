@@ -50,5 +50,8 @@ public class Main {
 
         //  Imprimir o total dos salários dos funcionários.
         funcionarioService.imprimirTotalSalarios();
+
+        //  Imprimir quantos salários mínimos ganha cada funcionário.
+        funcionarioService.imprimirSalariosMinimos();
     }
 }
