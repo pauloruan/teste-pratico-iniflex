@@ -30,4 +30,8 @@ public class FuncionarioService {
             );
         }
     }
+
+    public void atualizarSalarioFuncionario(Funcionario funcionario, double percentual) {
+        funcionario.setSalario(funcionario.getSalario().multiply(BigDecimal.valueOf(1 + percentual)));
+    }
 }
