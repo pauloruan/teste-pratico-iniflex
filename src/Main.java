@@ -23,5 +23,8 @@ public class Main {
 
         //  Remover funcionário "João"
         funcionarioService.removerFuncionario("João");
+
+        //  Imprimir todos os funcionários
+        funcionarioService.imprimirFuncionarios();
     }
 }
