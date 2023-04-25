@@ -47,5 +47,8 @@ public class Main {
 
         //  Imprimir funcionários por ordem alfabética
         funcionarioService.imprimirFuncionariosOrdemAlfabetica();
+
+        //  Imprimir o total dos salários dos funcionários.
+        funcionarioService.imprimirTotalSalarios();
     }
 }
