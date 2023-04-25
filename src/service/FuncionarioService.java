@@ -4,6 +4,7 @@ import funcionario.Funcionario;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -81,6 +82,22 @@ public class FuncionarioService {
         System.out.println("Funcionários que fazem aniversário no mês 10 e 12:");
         filtrarFuncionariosPorMesAniversario(10);
         filtrarFuncionariosPorMesAniversario(12);
+    }
+
+//    Imprimir o funcionário com a maior idade, exibir os atributos: nome e idade.
+    public void imprimirFuncionarioMaiorIdade() {
+        Funcionario funcionarioMaiorIdade = funcionarios.get(0);
+        for (Funcionario funcionario : funcionarios) {
+            if (funcionario.getDataNascimento().getYear() < funcionarioMaiorIdade.getDataNascimento().getYear()) {
+                funcionarioMaiorIdade = funcionario;
+            }
+        }
+        System.out.println("Funcionário com maior idade:");
+        System.out.println("Nome: " + funcionarioMaiorIdade.getNome()
+                + " - Idade: " + Period.between(funcionarioMaiorIdade.getDataNascimento(), LocalDate.now()).getYears()
+                + "."
+        );
+        System.out.println("\n");
     }
 
 }
