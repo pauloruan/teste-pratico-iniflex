@@ -18,4 +18,16 @@ public class FuncionarioService {
     public void removerFuncionario(String nome) {
         funcionarios.removeIf(funcionario -> funcionario.getNome().equals(nome));
     }
+
+    public void imprimirFuncionarios() {
+        System.out.println("Funcionários:");
+        for (Funcionario funcionario : funcionarios) {
+            System.out.println("Nome: " + funcionario.getNome()
+                    + " - Data de Nascimento: " + funcionario.getDataNascimentoFormatada()
+                    + " - Salário: " + funcionario.getSalarioFormatado()
+                    + " - Função: " + funcionario.getFuncao()
+                    + "."
+            );
+        }
+    }
 }
