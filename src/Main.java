@@ -41,5 +41,8 @@ public class Main {
 
         //  Imprimir funcionários aniversariantes do mês 10 e 12
         funcionarioService.imprimirFuncionariosAniversariantes();
+
+        //  Imprimir funcionário com maior idade
+        funcionarioService.imprimirFuncionarioMaiorIdade();
     }
 }

@@ -84,7 +84,7 @@ public class FuncionarioService {
         filtrarFuncionariosPorMesAniversario(12);
     }
 
-//    Imprimir o funcionário com a maior idade, exibir os atributos: nome e idade.
+
     public void imprimirFuncionarioMaiorIdade() {
         Funcionario funcionarioMaiorIdade = funcionarios.get(0);
         for (Funcionario funcionario : funcionarios) {
