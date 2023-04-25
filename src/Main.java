@@ -32,5 +32,8 @@ public class Main {
         for (Funcionario funcionario : funcionarioService.funcionarios) {
             funcionarioService.atualizarSalarioFuncionario(funcionario, 0.1);
         }
+
+        //  Agrupar funcionários ordenados por função
+        funcionarioService.agruparFuncionariosPorFuncao();
     }
 }
