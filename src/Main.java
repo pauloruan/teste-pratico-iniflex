@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Teste Prático - Iniflex");
+        System.out.println("Teste Prático - Iniflex\n");
 
         FuncionarioService funcionarioService = new FuncionarioService();
 
@@ -35,5 +35,8 @@ public class Main {
 
         //  Agrupar funcionários ordenados por função
         funcionarioService.agruparFuncionariosPorFuncao();
+
+        //  Imprimir funcionários agrupados por função
+        funcionarioService.imprimirFuncionariosPorFuncao();
     }
 }
