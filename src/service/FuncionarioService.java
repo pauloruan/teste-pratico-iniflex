@@ -4,12 +4,14 @@ import funcionario.Funcionario;
 import pessoa.Pessoa;
 
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class FuncionarioService {
@@ -114,5 +116,14 @@ public class FuncionarioService {
             );
         }
         System.out.println("\n");
+    }
+
+    public void imprimirTotalSalarios() {
+        BigDecimal totalSalarios = BigDecimal.ZERO;
+        NumberFormat totalSalariosFormatado = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+        for (Funcionario funcionario : funcionarios) {
+            totalSalarios = totalSalarios.add(funcionario.getSalario());
+        }
+        System.out.println("Total dos salários dos funcionários: " + totalSalariosFormatado.format(totalSalarios) + "\n");
     }
 }
