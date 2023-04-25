@@ -32,6 +32,7 @@ public class FuncionarioService {
                     + "."
             );
         }
+        System.out.println("\n");
     }
 
     public void atualizarSalarioFuncionario(Funcionario funcionario, double percentual) {
@@ -44,6 +45,21 @@ public class FuncionarioService {
                 funcionariosPorFuncao.put(funcionario.getFuncao(), new ArrayList<>());
             }
             funcionariosPorFuncao.get(funcionario.getFuncao()).add(funcionario);
+        }
+    }
+
+    public void imprimirFuncionariosPorFuncao() {
+        for (String funcao : funcionariosPorFuncao.keySet()) {
+            System.out.println("Funcionários com função " + funcao + ":");
+            for (Funcionario funcionario : funcionariosPorFuncao.get(funcao)) {
+                System.out.println("Nome: " + funcionario.getNome()
+                        + " - Data de Nascimento: " + funcionario.getDataNascimentoFormatada()
+                        + " - Salário: " + funcionario.getSalarioFormatado()
+                        + " - Função: " + funcionario.getFuncao()
+                        + "."
+                );
+            }
+            System.out.println("\n");
         }
     }
 }
