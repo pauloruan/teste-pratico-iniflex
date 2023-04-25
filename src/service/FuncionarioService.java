@@ -4,6 +4,7 @@ import funcionario.Funcionario;
 import pessoa.Pessoa;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -125,5 +126,16 @@ public class FuncionarioService {
             totalSalarios = totalSalarios.add(funcionario.getSalario());
         }
         System.out.println("Total dos salários dos funcionários: " + totalSalariosFormatado.format(totalSalarios) + "\n");
+    }
+
+    public void imprimirSalariosMinimos() {
+        BigDecimal salarioMinimo = BigDecimal.valueOf(1212.00);
+        for (Funcionario funcionario : funcionarios) {
+            System.out.println("Nome: " + funcionario.getNome()
+                    + " - Salário: " + funcionario.getSalarioFormatado()
+                    + " - Salários Mínimos: " + funcionario.getSalario().divide(salarioMinimo,2, RoundingMode.FLOOR)
+            );
+        }
+        System.out.println("\n");
     }
 }
