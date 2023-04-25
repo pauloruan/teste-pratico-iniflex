@@ -14,4 +14,8 @@ public class FuncionarioService {
         Funcionario funcionario = new Funcionario(nome, dataNascimento, salario, funcao);
         funcionarios.add(funcionario);
     }
+
+    public void removerFuncionario(String nome) {
+        funcionarios.removeIf(funcionario -> funcionario.getNome().equals(nome));
+    }
 }
