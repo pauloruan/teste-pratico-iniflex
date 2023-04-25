@@ -5,10 +5,13 @@ import funcionario.Funcionario;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class FuncionarioService {
     public List<Funcionario> funcionarios = new ArrayList<>();
+    public Map<String, List<Funcionario>> funcionariosPorFuncao = new HashMap<>();
 
     public void adicionarFuncionario(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
         Funcionario funcionario = new Funcionario(nome, dataNascimento, salario, funcao);
@@ -33,5 +36,14 @@ public class FuncionarioService {
 
     public void atualizarSalarioFuncionario(Funcionario funcionario, double percentual) {
         funcionario.setSalario(funcionario.getSalario().multiply(BigDecimal.valueOf(1 + percentual)));
+    }
+
+    public void agruparFuncionariosPorFuncao() {
+        for (Funcionario funcionario : funcionarios) {
+            if (!funcionariosPorFuncao.containsKey(funcionario.getFuncao())) {
+                funcionariosPorFuncao.put(funcionario.getFuncao(), new ArrayList<>());
+            }
+            funcionariosPorFuncao.get(funcionario.getFuncao()).add(funcionario);
+        }
     }
 }
