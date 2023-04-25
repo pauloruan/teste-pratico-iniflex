@@ -8,6 +8,7 @@ public class Main {
         System.out.println("Teste Prático - Iniflex");
 
         FuncionarioService funcionarioService = new FuncionarioService();
+
         //  Adicionar funcionários
         funcionarioService.adicionarFuncionario("Maria", LocalDate.of(2000,10,18), new BigDecimal("2009.44"), "Operador");
         funcionarioService.adicionarFuncionario("João", LocalDate.of(1990,5,12), new BigDecimal("2284.38"), "Operador");
@@ -19,5 +20,8 @@ public class Main {
         funcionarioService.adicionarFuncionario("Laura", LocalDate.of(1994,7,8), new BigDecimal("3017.45"), "Gerente");
         funcionarioService.adicionarFuncionario("Heloísa", LocalDate.of(2003,5,24), new BigDecimal("1606.85"), "Eletricista");
         funcionarioService.adicionarFuncionario("Helena", LocalDate.of(1996,9,2), new BigDecimal("2799.93"), "Gerente");
+
+        //  Remover funcionário "João"
+        funcionarioService.removerFuncionario("João");
     }
 }
