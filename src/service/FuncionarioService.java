@@ -1,11 +1,13 @@
 package service;
 
 import funcionario.Funcionario;
+import pessoa.Pessoa;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -84,7 +86,6 @@ public class FuncionarioService {
         filtrarFuncionariosPorMesAniversario(12);
     }
 
-
     public void imprimirFuncionarioMaiorIdade() {
         Funcionario funcionarioMaiorIdade = funcionarios.get(0);
         for (Funcionario funcionario : funcionarios) {
@@ -100,4 +101,18 @@ public class FuncionarioService {
         System.out.println("\n");
     }
 
+    public void imprimirFuncionariosOrdemAlfabetica() {
+        List<Funcionario> funcionariosOrdenados = new ArrayList<>(funcionarios);
+        funcionariosOrdenados.sort(Comparator.comparing(Pessoa::getNome));
+        System.out.println("Funcionários em ordem alfabética:");
+        for (Funcionario funcionario : funcionariosOrdenados) {
+            System.out.println("Nome: " + funcionario.getNome()
+                    + " - Data de Nascimento: " + funcionario.getDataNascimentoFormatada()
+                    + " - Salário: " + funcionario.getSalarioFormatado()
+                    + " - Função: " + funcionario.getFuncao()
+                    + "."
+            );
+        }
+        System.out.println("\n");
+    }
 }
