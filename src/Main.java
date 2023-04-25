@@ -38,5 +38,8 @@ public class Main {
 
         //  Imprimir funcionários agrupados por função
         funcionarioService.imprimirFuncionariosPorFuncao();
+
+        //  Imprimir funcionários aniversariantes do mês 10 e 12
+        funcionarioService.imprimirFuncionariosAniversariantes();
     }
 }
