@@ -44,5 +44,8 @@ public class Main {
 
         //  Imprimir funcionário com maior idade
         funcionarioService.imprimirFuncionarioMaiorIdade();
+
+        //  Imprimir funcionários por ordem alfabética
+        funcionarioService.imprimirFuncionariosOrdemAlfabetica();
     }
 }
