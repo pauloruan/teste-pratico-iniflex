@@ -1,3 +1,4 @@
+import funcionario.Funcionario;
 import service.FuncionarioService;
 
 import java.math.BigDecimal;
@@ -26,5 +27,10 @@ public class Main {
 
         //  Imprimir todos os funcionários
         funcionarioService.imprimirFuncionarios();
+
+        // Atualizar salário dos funcionários em 10%
+        for (Funcionario funcionario : funcionarioService.funcionarios) {
+            funcionarioService.atualizarSalarioFuncionario(funcionario, 0.1);
+        }
     }
 }
