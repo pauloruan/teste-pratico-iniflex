@@ -1,6 +1,6 @@
 package funcionario;
 
-import pessoa.Pessoa;
+import person.Pessoa;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
